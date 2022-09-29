@@ -1,0 +1,40 @@
+---
+import Layout from '../layouts/Page.astro'
+import Container from '../components/Container.astro';
+import BlogPostPreview from '../components/BlogPostPreview.astro';
+
+const posts = await Astro.glob('./posts/*.md');
+
+const seo = {
+  title: 'Page Title',
+  description: 'Page Description',
+}
+---
+
+<style>
+  h1 {
+    text-align: center;
+  }
+  ul {
+    margin: 10vh 0 0 0;
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+</style>
+
+<Layout seo={seo}>
+  <Container>
+    <h1>Blog</h1>
+    <ul>
+        {posts.map((post) => {
+          return (
+            <BlogPostPreview post={post}/>
+          );
+        })}
+    </ul>
+  </Container>
+</Layout>
+

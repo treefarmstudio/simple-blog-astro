@@ -1,0 +1,25 @@
+---
+import Layout from './Base.astro';
+import Container from "../components/Container.astro";
+
+const { frontmatter } = Astro.props;
+---
+
+<Layout seo={frontmatter}>
+  <Fragment slot="head-bottom">
+ </Fragment>
+  <Container>
+    <article class="post-content__article">
+      <h1>{frontmatter.title}</h1>
+      {frontmatter.image && <img width="720" height="420" class="post-main__img" loading="lazy" src={frontmatter.image} alt={frontmatter.alt} />}
+      <time>{frontmatter.publishDate}</time>
+      <slot />
+    </article>
+  </Container>
+</Layout>
+
+<style>
+  h1 {
+    text-align: center;
+  }
+</style>

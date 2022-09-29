@@ -1,0 +1,46 @@
+---
+const {post} = Astro.props;
+
+function normalizeDate(date) {
+  const d = new Date(date);
+  return d.toLocaleDateString('en-US', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric'
+  });
+}
+---
+
+<a class="post-preview__link" href={post.url}>
+<article class="post-preview__article">
+  <div class="img__placeholder"></div>
+  <div class="post-preview__text">
+    <h2>{post.frontmatter.title}</h2>
+    <p class="post-preview__date">{normalizeDate(post.frontmatter.date)}</p>
+  </div>
+</article>
+</a>
+  
+<style>
+.post-preview__link {
+  text-decoration: none;
+}
+.post-preview__article {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  align-items: center;
+}
+.post-preview__text h2{
+  font-size: var(--step-1);
+}
+.img__placeholder {
+  background-color: #ccc;
+  width: 250px;
+  height: 160px;
+  border-radius: 1rem;
+}
+.post-preview__date {
+  font-size: var(--step--1);
+  color: #666;
+}
+</style>
