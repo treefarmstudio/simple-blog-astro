@@ -1,0 +1,37 @@
+---
+import { Icon } from 'astro-icon';
+import Container from './Container.astro';
+import Logo from './Logo.astro';
+import SocialList from './SocialList.astro';
+---
+
+<header>
+  <Container>
+    <nav>
+      <a class="header__logo" href="/">
+        <Logo />
+      </a>
+      <SocialList />
+    </nav>
+  </Container>
+</header>
+
+<style>
+  header {
+    height: var(--theme-header-height, 64px);
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid var(--theme-primary-light);
+  }
+  nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .header__logo {
+    display: flex;
+    align-items: center;
+    margin: 0;
+  }
+</style>

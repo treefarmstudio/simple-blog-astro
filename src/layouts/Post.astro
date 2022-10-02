@@ -1,25 +1,58 @@
 ---
-import Layout from './Base.astro';
+import Layout from './Page.astro';
 import Container from "../components/Container.astro";
+import { formatDate } from '../utils/helpers';
 
 const { frontmatter } = Astro.props;
 ---
 
 <Layout seo={frontmatter}>
-  <Fragment slot="head-bottom">
- </Fragment>
   <Container>
     <article class="post-content__article">
-      <h1>{frontmatter.title}</h1>
-      {frontmatter.image && <img width="720" height="420" class="post-main__img" loading="lazy" src={frontmatter.image} alt={frontmatter.alt} />}
-      <time>{frontmatter.publishDate}</time>
-      <slot />
+      <div class="post-content__top">
+        {frontmatter.category && <p>{frontmatter.category}</p>}
+        <h1 class="post-content__title">{frontmatter.title}</h1>
+        <p class="post-content__date">
+          <time>{formatDate(frontmatter.publishedAt)}</time>
+        </p>
+        {frontmatter.image && <img width="1200" height="630" class="post-content__img" loading="eager" src={frontmatter.image} alt={frontmatter.alt} />}
+      </div>
+      <div class="post-content__content">
+        <slot />
+      </div>
     </article>
   </Container>
 </Layout>
 
 <style>
-  h1 {
+  .post-content__top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
+  }
+  .post-content__article {
+    padding: 10vh 0;
+  }
+  .post-content__title {
+    margin: 1rem auto;
+    font-size: var(--step-5);
+  }
+  .post-content__date {
+    margin: 0 auto;
+    font-size: var(--step--1);
+    color: var(--color-gray);
+    font-style: italic;
+  }
+  .post-content__img {
+    margin: 3rem 0 2rem 0;
+    max-width: 100%;
+    height: auto;
+    border-radius: 2rem;
+  }
+  .post-content__content :global(img) {
+    display: block;
+    margin: 2rem auto;
+    max-width: 100%;
   }
 </style>
