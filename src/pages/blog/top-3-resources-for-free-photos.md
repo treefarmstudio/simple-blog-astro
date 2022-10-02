@@ -1,17 +1,12 @@
 ---
 layout: '../../layouts/Post.astro'
-title: How to Make Money as a Freelancer
-date: "2021-01-01"
+title: Top 3 Resources for Free Photos
+image: https://source.unsplash.com/random/1200x630?freelance,work
+publishedAt: 2021-02-20
+category: 'Resources'
 ---
 
 ## h2 Heading
-### h3 Heading
-#### h4 Heading
-##### h5 Heading
-
-```sh
-npm run start
-```
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eget gravida cum sociis natoque penatibus et magnis dis. Posuere morbi leo urna molestie at elementum eu facilisis sed. Lectus nulla at volutpat diam. Pharetra magna ac placerat vestibulum lectus. Turpis massa tincidunt dui ut ornare lectus sit amet. Pretium vulputate sapien nec sagittis. Mollis nunc sed id semper. Odio pellentesque diam volutpat commodo sed egestas. Mi sit amet mauris commodo quis. Ullamcorper morbi tincidunt ornare massa. Mi proin sed libero enim sed faucibus turpis. Eu consequat ac felis donec et. Ultricies integer quis auctor elit. Aliquam sem et tortor consequat id porta nibh.
 
