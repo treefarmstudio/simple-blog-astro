@@ -1,8 +1,8 @@
 ---
-import { Icon } from 'astro-icon';
 import Container from './Container.astro';
 import Logo from './Logo.astro';
 import SocialList from './SocialList.astro';
+import { ThemeToggleButton } from './ThemeToggleButton/ThemeToggleButton';
 ---
 
 <header>
@@ -14,6 +14,10 @@ import SocialList from './SocialList.astro';
       <SocialList />
     </nav>
   </Container>
+  <div class="theme-toggle__container">
+    <!-- <Icon name="ic:round-dark-mode" width="18px" height="18px" /> -->
+    <ThemeToggleButton client:load />
+  </div>
 </header>
 
 <style>
@@ -33,5 +37,13 @@ import SocialList from './SocialList.astro';
     display: flex;
     align-items: center;
     margin: 0;
+  }
+  .theme-toggle__container {
+    margin-left: 1rem;
+    position: relative;
+    right: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 </style>

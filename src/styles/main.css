@@ -43,23 +43,51 @@
   --ease-out-soft: cubic-bezier(0.28,0,0.49,1);
 }
 
+
 @media( prefers-color-scheme: dark) {
   :root {
-     /* Colors */
-     --theme-primary: hsl(0, 0%, 90%);
-     --theme-on-primary: hsl(0, 0%, 5%);
+    /* Colors */
+    --theme-primary: hsl(0, 0%, 90%);
+    --theme-on-primary: hsl(0, 0%, 5%);
 
-      --theme-primary-hover: hsl(0, 0%, 80%);
+     --theme-primary-hover: hsl(0, 0%, 80%);
 
-     --theme-primary-light: hsl(0, 0%, 20%);
+    --theme-primary-light: hsl(0, 0%, 20%);
 
-    --theme-on-background: hsl(0, 0%, 92%);
-    --theme-background: hsl(0, 0%, 8%);
-
-    --theme-surface-1: hsl(0, 0%, 92%);
-    --theme-on-surface-1: hsl(0, 0%, 10%);
-  }
+   --theme-on-background: hsl(0, 0%, 92%);
+   --theme-background: hsl(0, 0%, 8%);
+ }
 }
+
+
+[color-scheme="light"]{
+    color-scheme: light;
+    /* Colors */
+    --theme-primary: hsl(0, 0%, 5%);
+    --theme-on-primary: hsl(0, 0%, 90%);
+  
+    --theme-primary-hover: hsl(0, 0%, 10%);
+    
+    --theme-primary-light: hsl(0, 0%, 80%);
+  
+    --theme-background: hsl(0, 0%, 98%);
+    --theme-on-background: hsl(0, 0%, 5%);
+}
+
+[color-scheme="dark"] {
+    color-scheme: dark;
+    /* Colors */
+    --theme-primary: hsl(0, 0%, 90%);
+    --theme-on-primary: hsl(0, 0%, 5%);
+
+     --theme-primary-hover: hsl(0, 0%, 80%);
+
+    --theme-primary-light: hsl(0, 0%, 20%);
+
+   --theme-on-background: hsl(0, 0%, 92%);
+   --theme-background: hsl(0, 0%, 8%);
+}
+
 
 html {
   scroll-behavior: smooth;
