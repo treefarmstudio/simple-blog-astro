@@ -3,31 +3,38 @@ import Layout from '../layouts/Page.astro'
 import Container from '../components/Container.astro';
 import BlogPostPreview from '../components/BlogPostPreview.astro';
 
-const posts = await Astro.glob('./posts/*.md');
+const posts = (await Astro.glob('./blog/*.{md,mdx}')).sort(
+	(a, b) => new Date(b.frontmatter.publishedAt).valueOf() - new Date(a.frontmatter.publishedAt).valueOf()
+);
 
 const seo = {
-  title: 'Page Title',
-  description: 'Page Description',
+  title: 'Simple Blog | A template by Little Sticks',
+  description: 'A simple blog template for Astro by Little Sticks',
 }
 ---
 
 <style>
+  .home-hero-text__container {
+    padding: 5vh 0;
+  }
   h1 {
     text-align: center;
   }
   ul {
-    margin: 10vh 0 0 0;
+    margin: 0 0 10vh 0;
     list-style: none;
     padding: 0;
     display: grid;
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: 3rem;
   }
 </style>
 
 <Layout seo={seo}>
   <Container>
-    <h1>Blog</h1>
+    <div class="home-hero-text__container">
+      <h1>Blog</h1>
+    </div>
     <ul>
         {posts.map((post) => {
           return (
