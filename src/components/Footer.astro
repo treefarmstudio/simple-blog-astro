@@ -2,6 +2,7 @@
 import { settings } from "../data/settings";
 import Container from "./Container.astro";
 import SocialList from './SocialList.astro';
+import LittleSticksPlug from "./LittleSticksPlug.astro";
 ---
 
 <footer>
@@ -28,6 +29,10 @@ import SocialList from './SocialList.astro';
         <li>Terms</li>
       </ul>
     </div>
+    <!-- You can delete this code or hide in the settings.ts file -->
+    {settings.showLittleSticksPlug && <div>
+     <LittleSticksPlug/>
+    </div>}
     <div class="footer-bottom__container">
       <p>&copy; {new Date().getFullYear()} {settings.name}</p>
       <SocialList />
@@ -67,6 +72,7 @@ import SocialList from './SocialList.astro';
     justify-content: space-between;
     align-items: center;
   }
+
   @media(max-width: 768px) {
     .footer-links__grid {
       grid-template-columns: repeat(2, 1fr);

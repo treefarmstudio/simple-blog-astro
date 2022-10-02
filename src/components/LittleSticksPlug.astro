@@ -1,0 +1,28 @@
+---
+import { Icon } from 'astro-icon';
+---
+
+<a class="btn" href="https://littlesticks.dev/templates">Get This Template <span class="icon"><Icon name="ic:round-north-east" width="18px" height="18px"/></span></a>
+
+<style>
+.btn {
+  margin-bottom: 1rem;
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 0.75rem;
+  background-color: var(--theme-primary);
+  color: var(--theme-on-primary);
+  border-radius: 0.5rem;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background-color: var(--theme-primary-hover);
+}
+
+.icon {
+  display: inline-block;
+  margin: 0.25rem 0 0 0.25rem;
+  vertical-align: middle; 
+}
+</style>

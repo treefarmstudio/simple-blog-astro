@@ -2,6 +2,8 @@
   /* Colors */
   --theme-primary: hsl(0, 0%, 5%);
   --theme-on-primary: hsl(0, 0%, 90%);
+
+  --theme-primary-hover: hsl(0, 0%, 10%);
   
   --theme-primary-light: hsl(0, 0%, 80%);
 
@@ -46,6 +48,8 @@
      /* Colors */
      --theme-primary: hsl(0, 0%, 90%);
      --theme-on-primary: hsl(0, 0%, 5%);
+
+      --theme-primary-hover: hsl(0, 0%, 80%);
 
      --theme-primary-light: hsl(0, 0%, 20%);
 
