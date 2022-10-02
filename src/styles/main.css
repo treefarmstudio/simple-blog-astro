@@ -81,6 +81,7 @@ body {
 
 a {
   color: inherit;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .content__main {
