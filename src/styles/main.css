@@ -2,10 +2,8 @@
   /* Colors */
   --theme-primary: hsl(0, 0%, 5%);
   --theme-on-primary: hsl(0, 0%, 90%);
-  --theme-primary--hover: #000;
-  --theme-secondary: #ffffff;
-  --theme-on-secondary: #000000;
-  --theme-secondary--hover: #ffffff;
+  
+  --theme-primary-light: hsl(0, 0%, 80%);
 
   --theme-background: hsl(0, 0%, 98%);
   --theme-on-background: hsl(0, 0%, 5%);
@@ -13,15 +11,20 @@
   --theme-surface-1: hsl(0, 0%, 92%);
   --theme-on-surface-1: hsl(0, 0%, 10%);
 
+  --theme-background-dark: hsl(0, 0%, 3%);
+  --theme-on-background-dark: hsl(0, 0%, 90%);
+
   /* Typography */
-  --step--2: clamp(0.75rem, calc(0.88rem + -0.18vw), 0.84rem);
-  --step--1: clamp(1.05rem, calc(1.05rem + 0.02vw), 1.06rem);
-  --step-0: clamp(1.31rem, calc(1.24rem + 0.37vw), 1.50rem);
-  --step-1: clamp(1.64rem, calc(1.45rem + 0.94vw), 2.12rem);
-  --step-2: clamp(2.05rem, calc(1.68rem + 1.85vw), 3.00rem);
-  --step-3: clamp(2.56rem, calc(1.91rem + 3.27vw), 4.24rem);
-  --step-4: clamp(3.20rem, calc(2.11rem + 5.45vw), 6.00rem);
-  --step-5: clamp(4.01rem, calc(2.26rem + 8.73vw), 8.48rem);
+ /* @link https://utopia.fyi/type/calculator?c=320,18,1.333,1140,20,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l */
+
+  --step--2: clamp(0.63rem, calc(0.57rem + 0.33vw), 0.80rem);
+  --step--1: clamp(0.84rem, calc(0.78rem + 0.30vw), 1.00rem);
+  --step-0: clamp(1.13rem, calc(1.08rem + 0.24vw), 1.25rem);
+  --step-1: clamp(1.50rem, calc(1.47rem + 0.12vw), 1.56rem);
+  --step-2: clamp(1.95rem, calc(2.02rem + -0.09vw), 2.00rem);
+  --step-3: clamp(2.44rem, calc(2.75rem + -0.44vw), 2.66rem);
+  --step-4: clamp(3.05rem, calc(3.75rem + -0.98vw), 3.55rem);
+  --step-5: clamp(3.82rem, calc(5.09rem + -1.80vw), 4.74rem);
 
   --font-family-heading: '', sans-serif;
   --font-family-body: 'Open Sans', sans-serif;
@@ -32,10 +35,26 @@
   --container-padding: 0 1rem;
   --container-max-width: 860px;
 
-  --nav-height: 76px;
+  --header-height: 76px;
 
   /* Transitions */
   --ease-out-soft: cubic-bezier(0.28,0,0.49,1);
+}
+
+@media( prefers-color-scheme: dark) {
+  :root {
+     /* Colors */
+     --theme-primary: hsl(0, 0%, 90%);
+     --theme-on-primary: hsl(0, 0%, 5%);
+
+     --theme-primary-light: hsl(0, 0%, 20%);
+
+    --theme-on-background: hsl(0, 0%, 92%);
+    --theme-background: hsl(0, 0%, 8%);
+
+    --theme-surface-1: hsl(0, 0%, 92%);
+    --theme-on-surface-1: hsl(0, 0%, 10%);
+  }
 }
 
 html {
@@ -52,6 +71,8 @@ body {
   line-height: 1.5;
   max-width: var(--body-max-width);
   position: relative;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
 }
 
 .flow>*+* {
@@ -72,14 +93,14 @@ a {
 h1 {
   font-size: var(--step-4);
   font-family: var(--font-family-heading);
-  font-weight: 600;
+  font-weight: 700;
   line-height: 1.2;
 }
 
 h2 {
   font-size: var(--step-3);
   font-family: var(--font-family-heading);
-  font-weight: 500;
+  font-weight: 700;
   line-height: 1.2;
 }
 
@@ -101,4 +122,11 @@ h1, h2, h3 {
 
 p, li {
   max-width: 70ch;
+}
+
+pre {
+  max-width: 100%;
+  overflow-x: auto;
+  padding: 1rem 0.5rem;
+  border-radius: 0.25rem;
 }
