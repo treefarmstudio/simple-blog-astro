@@ -4,8 +4,6 @@ import { html, css, LitElement } from "lit";
 import { customElement, property } from "lit/decorators.js";
 import { lightThemeIcon, darkThemeIcon } from "./icons";
 
-export const tagName = "theme-toggle-button"
-
 @customElement("theme-toggle-button")
 export class ThemeToggleButton extends LitElement {
   static styles = css`
@@ -23,9 +21,9 @@ export class ThemeToggleButton extends LitElement {
       box-sizing: border-box;
       border: none;
       outline: none;
-      background-color: var(--theme-primary-light);
+      background-color: var(--theme-surface-1);
       fill: currentcolor;
-      color: inherit;
+      color: var(--theme-on-surface-1);
       text-decoration: none;
       cursor: pointer;
       vertical-align: middle;
@@ -43,7 +41,7 @@ export class ThemeToggleButton extends LitElement {
    * The theme for the website the component is being used on
    */
   @property({ type: String, reflect: true, attribute: "theme" })
-  theme = "light";  
+  theme = null;  
 
   firstUpdated() {
     this._getCurrentTheme();

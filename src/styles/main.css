@@ -10,7 +10,7 @@
   --theme-background: hsl(0, 0%, 98%);
   --theme-on-background: hsl(0, 0%, 5%);
 
-  --theme-surface-1: hsl(0, 0%, 92%);
+  --theme-surface-1: hsl(0, 0%, 96%);
   --theme-on-surface-1: hsl(0, 0%, 10%);
 
   --theme-footer-background: hsl(0, 0%, 3%);
@@ -55,6 +55,9 @@
 
     --theme-on-background: hsl(0, 0%, 92%);
     --theme-background: hsl(0, 0%, 8%);
+
+    --theme-surface-1: hsl(0, 0%, 10%);
+    --theme-on-surface-1: hsl(0, 0%, 96%);
   }
 }
 
@@ -84,6 +87,9 @@
 
   --theme-on-background: hsl(0, 0%, 92%);
   --theme-background: hsl(0, 0%, 8%);
+
+  --theme-surface-1: hsl(0, 0%, 10%);
+  --theme-on-surface-1: hsl(0, 0%, 96%);
 }
 
 html {
@@ -163,3 +169,6 @@ pre {
   padding: 1rem 0.5rem;
   border-radius: 0.25rem;
 }
+
+/* Animations */
+
