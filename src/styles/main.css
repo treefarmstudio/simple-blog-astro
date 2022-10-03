@@ -13,8 +13,8 @@
   --theme-surface-1: hsl(0, 0%, 92%);
   --theme-on-surface-1: hsl(0, 0%, 10%);
 
-  --theme-background-dark: hsl(0, 0%, 3%);
-  --theme-on-background-dark: hsl(0, 0%, 90%);
+  --theme-footer-background: hsl(0, 0%, 3%);
+  --theme-on-footer-background: hsl(0, 0%, 90%);
 
   /* Typography */
   /* @link https://utopia.fyi/type/calculator?c=320,18,1.333,1140,20,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l */
