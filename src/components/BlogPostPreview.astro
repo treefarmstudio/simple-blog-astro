@@ -6,7 +6,11 @@ import {formatDate} from '../utils/helpers'
 
 <a class="post-preview__link" href={post.url}>
 <article class="post-preview__article">
-  <img class="post-preview__img" src={post.frontmatter.image}>
+  <!-- Hopefully we'll be able to use Astro's image integration for this soon -->
+  <picture>
+    <source srcset={`${post.frontmatter.image}.webp`} type="image/webp">
+    <img class="post-preview__img" src={`${post.frontmatter.image}.png`} alt={`Featured image for ${post.title}`} >
+  </picture>
   <div class="post-preview__text">
     {post.frontmatter?.category && <p class="post-preview__category">{post.frontmatter.category}</p>}
     <h2>{post.frontmatter.title}</h2>

@@ -1,6 +1,6 @@
 ---
 import Layout from './Page.astro';
-import Container from "../components/Container.astro";
+import Container from '../components/Container.astro';
 import { formatDate } from '../utils/helpers';
 
 const { frontmatter } = Astro.props;
@@ -15,7 +15,25 @@ const { frontmatter } = Astro.props;
         <p class="post-content__date">
           <time>{formatDate(frontmatter.publishedAt)}</time>
         </p>
-        {frontmatter.image && <img width="1200" height="630" class="post-content__img" loading="eager" src={frontmatter.image} alt={frontmatter.alt} />}
+        <!-- Hopefully we'll be able to use Astro's image integration for this soon -->
+        {
+          frontmatter.image && (
+            <picture>
+              <source
+                srcset={`${frontmatter.image}.webp`}
+                type="image/webp"
+              />
+              <img
+                width="1200"
+                height="630"
+                class="post-content__img"
+                loading="eager"
+                src={`${frontmatter.image}.png`}
+                alt={frontmatter.alt}
+              />
+            </picture>
+          )
+        }
       </div>
       <div class="post-content__content">
         <slot />

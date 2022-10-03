@@ -1,7 +1,7 @@
 ---
 layout: '../../layouts/Post.astro'
 title: Web Design Trends for 2023
-image: /images/web-design.png
+image: /images/web-design
 publishedAt: 2022-09-03
 category: 'Resources'
 ---
