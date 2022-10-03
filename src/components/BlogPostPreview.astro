@@ -6,7 +6,7 @@ import {formatDate} from '../utils/helpers'
 
 <a class="post-preview__link" href={post.url}>
 <article class="post-preview__article">
-  <img class="post-preview__img" src="https://source.unsplash.com/random/?freelance,work">
+  <img class="post-preview__img" src={post.frontmatter.image}>
   <div class="post-preview__text">
     {post.frontmatter?.category && <p class="post-preview__category">{post.frontmatter.category}</p>}
     <h2>{post.frontmatter.title}</h2>

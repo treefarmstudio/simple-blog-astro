@@ -1,7 +1,7 @@
 ---
 layout: '../../layouts/Post.astro'
 title: Top 3 Resources for Free Photos
-image: https://source.unsplash.com/random/1200x630?freelance,work
+image: /images/photography.png
 publishedAt: 2021-02-20
 category: 'Resources'
 ---

@@ -1,7 +1,7 @@
 ---
 layout: '../../layouts/Post.astro'
 title: How to Make Money as a Freelancer
-image: https://source.unsplash.com/random/1200x630?freelance,work
+image: /images/freelance.png
 publishedAt: "2021-01-01"
 category: 'Freelance'
 ---

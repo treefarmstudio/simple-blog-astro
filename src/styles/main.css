@@ -4,7 +4,7 @@
   --theme-on-primary: hsl(0, 0%, 90%);
 
   --theme-primary-hover: hsl(0, 0%, 10%);
-  
+
   --theme-primary-light: hsl(0, 0%, 80%);
 
   --theme-background: hsl(0, 0%, 98%);
@@ -17,16 +17,16 @@
   --theme-on-background-dark: hsl(0, 0%, 90%);
 
   /* Typography */
- /* @link https://utopia.fyi/type/calculator?c=320,18,1.333,1140,20,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l */
+  /* @link https://utopia.fyi/type/calculator?c=320,18,1.333,1140,20,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l */
 
-  --step--2: clamp(0.63rem, calc(0.57rem + 0.33vw), 0.80rem);
-  --step--1: clamp(0.84rem, calc(0.78rem + 0.30vw), 1.00rem);
+  --step--2: clamp(0.63rem, calc(0.57rem + 0.33vw), 0.8rem);
+  --step--1: clamp(0.84rem, calc(0.78rem + 0.3vw), 1rem);
   --step-0: clamp(1.13rem, calc(1.08rem + 0.24vw), 1.25rem);
-  --step-1: clamp(1.50rem, calc(1.47rem + 0.12vw), 1.56rem);
-  --step-2: clamp(1.95rem, calc(2.02rem + -0.09vw), 2.00rem);
+  --step-1: clamp(1.5rem, calc(1.47rem + 0.12vw), 1.56rem);
+  --step-2: clamp(1.95rem, calc(2.02rem + -0.09vw), 2rem);
   --step-3: clamp(2.44rem, calc(2.75rem + -0.44vw), 2.66rem);
   --step-4: clamp(3.05rem, calc(3.75rem + -0.98vw), 3.55rem);
-  --step-5: clamp(3.82rem, calc(5.09rem + -1.80vw), 4.74rem);
+  --step-5: clamp(3.82rem, calc(5.09rem + -1.8vw), 4.74rem);
 
   --font-family-heading: '', sans-serif;
   --font-family-body: 'Open Sans', sans-serif;
@@ -40,54 +40,51 @@
   --header-height: 76px;
 
   /* Transitions */
-  --ease-out-soft: cubic-bezier(0.28,0,0.49,1);
+  --ease-out-soft: cubic-bezier(0.28, 0, 0.49, 1);
 }
 
-
-@media( prefers-color-scheme: dark) {
+@media (prefers-color-scheme: dark) {
   :root {
     /* Colors */
     --theme-primary: hsl(0, 0%, 90%);
     --theme-on-primary: hsl(0, 0%, 5%);
 
-     --theme-primary-hover: hsl(0, 0%, 80%);
+    --theme-primary-hover: hsl(0, 0%, 80%);
 
     --theme-primary-light: hsl(0, 0%, 20%);
 
-   --theme-on-background: hsl(0, 0%, 92%);
-   --theme-background: hsl(0, 0%, 8%);
- }
+    --theme-on-background: hsl(0, 0%, 92%);
+    --theme-background: hsl(0, 0%, 8%);
+  }
 }
 
+[color-scheme='light'] {
+  color-scheme: light;
+  /* Colors */
+  --theme-primary: hsl(0, 0%, 5%);
+  --theme-on-primary: hsl(0, 0%, 90%);
 
-[color-scheme="light"]{
-    color-scheme: light;
-    /* Colors */
-    --theme-primary: hsl(0, 0%, 5%);
-    --theme-on-primary: hsl(0, 0%, 90%);
-  
-    --theme-primary-hover: hsl(0, 0%, 10%);
-    
-    --theme-primary-light: hsl(0, 0%, 80%);
-  
-    --theme-background: hsl(0, 0%, 98%);
-    --theme-on-background: hsl(0, 0%, 5%);
+  --theme-primary-hover: hsl(0, 0%, 10%);
+
+  --theme-primary-light: hsl(0, 0%, 80%);
+
+  --theme-background: hsl(0, 0%, 98%);
+  --theme-on-background: hsl(0, 0%, 5%);
 }
 
-[color-scheme="dark"] {
-    color-scheme: dark;
-    /* Colors */
-    --theme-primary: hsl(0, 0%, 90%);
-    --theme-on-primary: hsl(0, 0%, 5%);
+[color-scheme='dark'] {
+  color-scheme: dark;
+  /* Colors */
+  --theme-primary: hsl(0, 0%, 90%);
+  --theme-on-primary: hsl(0, 0%, 5%);
 
-     --theme-primary-hover: hsl(0, 0%, 80%);
+  --theme-primary-hover: hsl(0, 0%, 80%);
 
-    --theme-primary-light: hsl(0, 0%, 20%);
+  --theme-primary-light: hsl(0, 0%, 20%);
 
-   --theme-on-background: hsl(0, 0%, 92%);
-   --theme-background: hsl(0, 0%, 8%);
+  --theme-on-background: hsl(0, 0%, 92%);
+  --theme-background: hsl(0, 0%, 8%);
 }
-
 
 html {
   scroll-behavior: smooth;
@@ -107,7 +104,7 @@ body {
   grid-template-rows: auto 1fr auto;
 }
 
-.flow>*+* {
+.flow > * + * {
   margin-top: var(--flow-space, 1em);
 }
 
@@ -149,11 +146,14 @@ h4 {
   font-family: var(--font-family-heading);
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   max-width: 30ch;
 }
 
-p, li {
+p,
+li {
   max-width: 70ch;
 }
 
