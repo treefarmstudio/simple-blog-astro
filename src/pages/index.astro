@@ -38,7 +38,9 @@ const seo = {
     <ul>
         {posts.map((post) => {
           return (
-            <BlogPostPreview post={post}/>
+            <li>
+              <BlogPostPreview post={post}/>
+            </li>
           );
         })}
     </ul>
