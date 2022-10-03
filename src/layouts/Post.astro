@@ -4,9 +4,15 @@ import Container from '../components/Container.astro';
 import { formatDate } from '../utils/helpers';
 
 const { frontmatter } = Astro.props;
+
+const seo = {
+  title: frontmatter.title,
+  description: frontmatter.description,
+  image: frontmatter.image,
+}
 ---
 
-<Layout seo={frontmatter}>
+<Layout seo={seo}>
   <Container>
     <article class="post-content__article">
       <div class="post-content__top">

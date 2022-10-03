@@ -1,5 +1,5 @@
 export const settings = {
-  site: 'https://changeme.com',
+  site: 'https://simple-blog.littlesticks.dev',
   name: 'Simple Blog',
   title: 'Site title',
   description: 'Site description',
