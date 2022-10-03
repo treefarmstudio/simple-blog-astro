@@ -16,7 +16,7 @@ const seo = {
   <Container>
     <article class="post-content__article">
       <div class="post-content__top">
-        {frontmatter.category && <p>{frontmatter.category}</p>}
+        {frontmatter.category && <p class="post-content__category">{frontmatter.category}</p>}
         <h1 class="post-content__title">{frontmatter.title}</h1>
         <p class="post-content__date">
           <time>{formatDate(frontmatter.publishedAt)}</time>
@@ -54,6 +54,12 @@ const seo = {
     flex-direction: column;
     align-items: center;
     text-align: center;
+  }
+  .post-content__category {
+    padding: 0.5rem 1rem;
+    font-size: var(--step--1);
+    background-color: var(--theme-surface-1);
+    border-radius: 2rem;
   }
   .post-content__article {
     padding: 5vh 0;

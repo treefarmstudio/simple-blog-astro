@@ -9,7 +9,7 @@ import {formatDate} from '../utils/helpers'
   <!-- Hopefully we'll be able to use Astro's image integration for this soon -->
   <picture>
     <source srcset={`${post.frontmatter.image}.webp`} type="image/webp">
-    <img class="post-preview__img" src={`${post.frontmatter.image}.png`} alt={`Featured image for ${post.title}`} >
+    <img class="post-preview__img" src={`${post.frontmatter.image}.png`} alt={`Featured image for ${post.frontmatter.title}`} >
   </picture>
   <div class="post-preview__text">
     {post.frontmatter?.category && <p class="post-preview__category">{post.frontmatter.category}</p>}
@@ -39,9 +39,13 @@ import {formatDate} from '../utils/helpers'
   transition: transform 0.2s ease-in-out;
 }
 .post-preview__category {
-  margin-bottom: 0.25rem;
-  font-size: var(--step--1);
-  color: #666;
+  width: fit-content;
+  padding: 0.25rem 0.75rem;
+  background-color: var(--theme-surface-1);
+  border-radius: 2rem;
+  margin-bottom: 0.5rem;
+  font-size: var(--step--2);
+  /* color: #666; */
 }
 .post-preview__text h2{
   font-size: var(--step-1);
