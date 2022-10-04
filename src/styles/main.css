@@ -164,10 +164,17 @@ li {
 }
 
 pre {
+  position: relative;
   max-width: 100%;
   overflow-x: auto;
-  padding: 1rem 0.5rem;
+  padding: 1rem 0.75rem;
   border-radius: 0.25rem;
+}
+
+pre copy-code-button {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
 }
 
 /* Animations */

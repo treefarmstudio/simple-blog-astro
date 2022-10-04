@@ -1,6 +1,7 @@
 ---
 import BaseHead from "../components/BaseHead.astro";
 import type { Props as BaseHeadProps } from '../components/BaseHead.astro';
+import CreateCopyCodeButtons from "../components/CodeButtons/CreateCopyCodeButtons.astro";
 
 
 export interface Props {
@@ -14,6 +15,10 @@ const { seo } = Astro.props;
   <head>
     <BaseHead {...seo} />
     <slot name="head-bottom" />
+    <CreateCopyCodeButtons />
+    <script>
+      import '../components/CodeButtons/copy-code-button'
+    </script>
   </head>
   <body>
     <slot name="header" />

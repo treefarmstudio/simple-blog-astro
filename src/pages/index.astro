@@ -2,7 +2,6 @@
 import Layout from '../layouts/Page.astro'
 import Container from '../components/Container.astro';
 import BlogPostPreview from '../components/BlogPostPreview.astro';
-
 const posts = (await Astro.glob('./blog/*.{md,mdx}')).sort(
 	(a, b) => new Date(b.frontmatter.publishedAt).valueOf() - new Date(a.frontmatter.publishedAt).valueOf()
 );
