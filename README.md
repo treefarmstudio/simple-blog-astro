@@ -28,7 +28,7 @@ This is a blog theme/template for Astro. It is based on the [excellent blog temp
 - ✅ Modern CSS Reset via Andy Bell
 - ✅ Fluid typography scaling via Utopia
 - ✅ Base and Page Layouts
-- ✅ A code block component with syntax highlighting and a copy button
+- ✅ A copy code to clipboard button on all code blocks.
 - ✅ Automatic Sitemap
 
 ## Get Started 
