@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "@astrojs/lit": "^1.0.1",
+    "@astrojs/mdx": "^0.11.4",
     "@webcomponents/template-shadowroot": "^0.1.0",
     "lit": "^2.3.1"
   }
