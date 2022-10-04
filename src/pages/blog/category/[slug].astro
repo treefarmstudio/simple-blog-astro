@@ -1,8 +1,7 @@
 ---
-// Component imports and setup JavaScript go here!
 import Layout from '../../../layouts/Page.astro'
 import Container from '../../../components/Container.astro';
-import BlogPostPreview from '../../../components/BlogPostPreview.astro';
+import BlogPostsList from '../../../components/BlogPostsList.astro';
 
 import {generateCategoryData} from '../../../utils/helpers.js'
 
@@ -39,25 +38,12 @@ const {category, posts} = Astro.props;
     <div class="home-hero-text__container">
       <h1>{category} Posts</h1>
     </div>
-    <ul>
-      {posts.map(post => (
-        <li>
-          <BlogPostPreview post={post} />
-        </li>
-      ))}
-    </ul>
+    <BlogPostsList posts={posts}/>
   </Container>
 </Layout>
 
 <style>
   .home-hero-text__container {
     padding: 5vh 0;
-  }
-  ul {
-    list-style: none;
-    padding: 0;
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 3rem;
   }
 </style>
