@@ -51,12 +51,6 @@ npm i && npm start
 
 ## Deploy
 
-Deploy this site to your favorite static hosting service using Astro's docs or quickly deploy to Netlify with the button below 
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/littlesticks/simple-blog-astro)
-
-## Deploy
-
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/littlesticks/simple-blog-astro)
 
 Feel free to deploy and host your site on your favorite static hosting service such as Netlify, Firebase Hosting, Vercel, GitHub Pages, etc.
