@@ -59,7 +59,7 @@ Astro has [an in-depth guide](https://docs.astro.build/en/guides/deploy/) on how
 
 ## Sponsor
 
-If you find this theme useful, please consider donating to support the continued development of it with the link below
+If you find this theme useful, please consider donating to support the continued development of it and other themes like it with the link below.
 
 [Donate to Little Sticks](https://buy.stripe.com/bIY5na6r75nBaYgcMP)
 
