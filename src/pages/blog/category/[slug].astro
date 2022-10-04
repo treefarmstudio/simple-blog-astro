@@ -1,0 +1,63 @@
+---
+// Component imports and setup JavaScript go here!
+import Layout from '../../../layouts/Page.astro'
+import Container from '../../../components/Container.astro';
+import BlogPostPreview from '../../../components/BlogPostPreview.astro';
+
+import {generateCategoryData} from '../../../utils/helpers.js'
+
+export async function getStaticPaths() {
+  const allPosts = await Astro.glob('../*.{mdx,md}');
+  const sortedPosts = allPosts.sort((a, b) => new Date(b.date).valueOf() - new Date(a.date).valueOf());
+  const allCategoriesUnique = new Set();
+
+  sortedPosts.forEach(post => {
+    if(post.frontmatter.category) {
+      allCategoriesUnique.add(post.frontmatter.category);
+    }
+  })
+  const allCategoriesData = generateCategoryData(allCategoriesUnique);
+   // map through the categories array
+  return allCategoriesData.map((category) => {
+    // filter the posts that match the given category
+    const posts = sortedPosts.filter((post) => post.frontmatter.category.includes(category.name))
+      return {
+      params: {slug: category.slug}, 
+      props: {
+        category: category.name, 
+        posts: posts
+      }
+    };
+  });
+}
+const {category, posts} = Astro.props;
+
+---
+
+<Layout>
+  <Container>
+    <div class="home-hero-text__container">
+      <h1>{category} Posts</h1>
+    </div>
+    <ul>
+      {posts.map(post => (
+        <li>
+          <BlogPostPreview post={post} />
+        </li>
+      ))}
+    </ul>
+  </Container>
+</Layout>
+
+<style>
+  .home-hero-text__container {
+    padding: 5vh 0;
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+</style>

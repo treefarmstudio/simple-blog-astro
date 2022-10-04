@@ -1,7 +1,7 @@
 ---
 import Layout from './Page.astro';
 import Container from '../components/Container.astro';
-import { formatDate } from '../utils/helpers';
+import { formatDate, slugify } from '../utils/helpers';
 
 const { frontmatter } = Astro.props;
 
@@ -9,14 +9,22 @@ const seo = {
   title: frontmatter.title,
   description: frontmatter.description,
   image: frontmatter.image,
-}
+};
 ---
 
 <Layout seo={seo}>
   <Container>
     <article class="post-content__article">
       <div class="post-content__top">
-        {frontmatter.category && <p class="post-content__category">{frontmatter.category}</p>}
+        {
+          frontmatter.category && (
+            <p class="post-content__category">
+              <a href={`/blog/category/${slugify(frontmatter.category)}`}>
+                {frontmatter.category}
+              </a>
+            </p>
+          )
+        }
         <h1 class="post-content__title">{frontmatter.title}</h1>
         <p class="post-content__date">
           <time>{formatDate(frontmatter.publishedAt)}</time>
@@ -25,10 +33,7 @@ const seo = {
         {
           frontmatter.image && (
             <picture>
-              <source
-                srcset={`${frontmatter.image}.webp`}
-                type="image/webp"
-              />
+              <source srcset={`${frontmatter.image}.webp`} type="image/webp" />
               <img
                 width="1200"
                 height="630"
@@ -60,6 +65,12 @@ const seo = {
     font-size: var(--step--1);
     background-color: var(--theme-surface-1);
     border-radius: 2rem;
+  }
+  .post-content__category a {
+    text-decoration: none;
+  }
+  .post-content__category a:hover {
+    opacity: 0.8;
   }
   .post-content__article {
     padding: 5vh 0;
