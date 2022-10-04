@@ -180,5 +180,15 @@ pre copy-code-button {
   right: 0.5rem;
 }
 
-/* Animations */
+/* Gloal fade in animation */
 
+@media (prefers-reduced-motion: no-preference) {
+  .fade-in[data-state=visible] {
+      transition: transform 700ms cubic-bezier(0.42, 0, 0.32, 1.17), opacity 1000ms cubic-bezier(0.42, 0, 0.32, 1.17) 200ms;
+  }
+
+  .fade-in[data-state=hidden] {
+      transform: translateY(2ex);
+      opacity: 0;
+  }
+}

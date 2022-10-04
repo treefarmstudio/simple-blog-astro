@@ -2,7 +2,8 @@
 import BaseHead from "../components/BaseHead.astro";
 import type { Props as BaseHeadProps } from '../components/BaseHead.astro';
 import CreateCopyCodeButtons from "../components/CodeButtons/CreateCopyCodeButtons.astro";
-
+// import FadeIn from "../components/FadeIn.astro";
+import ThemeProvider from "../components/ThemeToggleButton/ThemeProvider.astro";
 
 export interface Props {
 	seo?: BaseHeadProps;
@@ -14,7 +15,9 @@ const { seo } = Astro.props;
 <html lang="en">
   <head>
     <BaseHead {...seo} />
-    <slot name="head-bottom" />
+    <ThemeProvider/>
+    <!-- This is and experimental global fade in animation that is being worked on, enable at your own risk of some jank -->
+    <!-- <FadeIn/> -->
     <CreateCopyCodeButtons />
     <script>
       import '../components/CodeButtons/copy-code-button'

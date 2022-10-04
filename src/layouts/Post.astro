@@ -15,7 +15,7 @@ const seo = {
 <Layout seo={seo}>
   <Container>
     <article class="post-content__article">
-      <div class="post-content__top">
+      <div class="post-content__top fade-in">
         {
           frontmatter.category && (
             <p class="post-content__category">
@@ -46,7 +46,7 @@ const seo = {
           )
         }
       </div>
-      <div class="post-content__content flow">
+      <div class="post-content__content flow fade-in">
         <slot />
       </div>
     </article>
