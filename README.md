@@ -36,7 +36,7 @@ This is a blog theme/template for Astro. It is based on the [excellent blog temp
 Customize the global site settings such as the title and description in the `src/data/settings.ts` file
 
 <p>
-  <a href="https://stackblitz.com/github/littlesticks/REPLACEME">
+  <a href="https://stackblitz.com/github/littlesticks/simple-blog-astro">
   <img src="https://developer.stackblitz.com/img/open_in_stackblitz.svg" height="36px" />
   </a>
 </p>
