@@ -73,6 +73,9 @@
 
   --theme-background: hsl(0, 0%, 98%);
   --theme-on-background: hsl(0, 0%, 5%);
+
+  --theme-surface-1: hsl(0, 0%, 93%);
+  --theme-on-surface-1: hsl(0, 0%, 10%);
 }
 
 [color-scheme='dark'] {
