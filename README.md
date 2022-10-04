@@ -19,7 +19,7 @@
 
 # Simple Blog
 
-This is a blog theme/template for Astro. It is based on the [excellent blog template](https://blog.framer.website/) by Framer.
+This is a blog theme/template for Astro. It is inspired by the excellent [blog template](https://blog.framer.website/) by Framer.
 
 ## Features
 
