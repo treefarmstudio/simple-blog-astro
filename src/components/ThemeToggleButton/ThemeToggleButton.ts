@@ -79,7 +79,11 @@ export class ThemeToggleButton extends LitElement {
     >
       ${this.theme === "dark"
         ? html`${lightThemeIcon}`
-        : html`${darkThemeIcon}`}
+        : ``}
+      ${this.theme === "light"
+        ? html`${darkThemeIcon}`
+        : ``}
+      ${this.theme === null ? html`${lightThemeIcon}` : ``}
     </button>`;
   }
 }
