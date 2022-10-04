@@ -48,11 +48,8 @@ export class ThemeToggleButton extends LitElement {
   }
 
   private _getCurrentTheme() {
-		// check for a local storage theme first
-		const localStorageTheme = localStorage.getItem('theme');
-		if (localStorageTheme !== null) {
-			this._setTheme(localStorageTheme);
-		} else if (this._doc!.hasAttribute("color-scheme")) {
+
+		if (this._doc!.hasAttribute("color-scheme")) {
       this._setTheme(this._doc!.getAttribute("color-scheme")!);
     } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
       this._setTheme("dark");
@@ -79,11 +76,7 @@ export class ThemeToggleButton extends LitElement {
     >
       ${this.theme === "dark"
         ? html`${lightThemeIcon}`
-        : ``}
-      ${this.theme === "light"
-        ? html`${darkThemeIcon}`
-        : ``}
-      ${this.theme === null ? html`${lightThemeIcon}` : ``}
+        : html`${darkThemeIcon}`}
     </button>`;
   }
 }
