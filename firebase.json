@@ -1,0 +1,11 @@
+{
+  "hosting": [{
+    "target": "simple-blog",
+    "public": "dist",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }]
+}

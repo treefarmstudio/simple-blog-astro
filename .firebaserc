@@ -1,0 +1,21 @@
+{
+  "projects": {
+    "default": "little-sticks"
+  },
+  "targets": {
+    "little-sticks": {
+      "hosting": {
+        "odyssey-theme": [
+          "odyssey-theme"
+        ],
+        "simple-blog": [
+          "little-sticks-simple-blog"
+        ],
+        "www": [
+          "little-sticks"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}
